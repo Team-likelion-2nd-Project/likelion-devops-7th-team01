@@ -1,5 +1,7 @@
 # {{프로젝트명}} ({{PROJECT_NAME_EN}})
 
+> **협업이 처음이신가요?** 이슈 생성부터 PR 머지까지 전 과정은 [협업 가이드](./docs/GUIDE.md)를 먼저 읽어주세요.
+
 ![Team](https://img.shields.io/badge/Team-team-01-151515?style=for-the-badge)
 <!-- 사용 기술만 남기고 나머지는 삭제 -->
 ![React](https://img.shields.io/badge/React-151515?style=for-the-badge&logo=react&logoColor=61DAFB)
@@ -166,7 +168,8 @@ cd frontend && npm run build
 
 ## 기여 방법
 
-브랜치 전략·커밋 규칙·PR 절차는 [CONTRIBUTING.md](./CONTRIBUTING.md) 를 따릅니다.
+- **규칙 요약** — [CONTRIBUTING.md](./CONTRIBUTING.md)
+- **실행 방법 상세** — [협업 가이드](./docs/GUIDE.md)
 
 ## License
 
