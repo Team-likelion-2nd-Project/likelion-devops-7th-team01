@@ -1,0 +1,92 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main, develop]
+  push:
+    branches: [main, develop]
+
+# 각 job은 해당 디렉터리가 없으면 자동으로 건너뜁니다(초록 통과).
+# 프로젝트가 시작되면 자연스럽게 활성화됩니다.
+jobs:
+  frontend:
+    name: Frontend Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Detect frontend
+        id: detect
+        run: |
+          if [ -f frontend/package.json ]; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+            echo "frontend/package.json 없음 — 건너뜁니다."
+          fi
+
+      - uses: actions/setup-node@v4
+        if: steps.detect.outputs.exists == 'true'
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install
+        if: steps.detect.outputs.exists == 'true'
+        working-directory: ./frontend
+        run: npm ci
+
+      - name: Lint
+        if: steps.detect.outputs.exists == 'true'
+        working-directory: ./frontend
+        run: npm run lint --if-present
+
+      - name: Build
+        if: steps.detect.outputs.exists == 'true'
+        working-directory: ./frontend
+        run: npm run build
+
+  backend:
+    name: Backend Build & Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Detect backend
+        id: detect
+        run: |
+          if [ -f backend/gradlew ] || [ -f backend/pom.xml ] || [ -f backend/requirements.txt ]; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+            echo "backend 빌드 파일 없음 — 건너뜁니다."
+          fi
+
+      - uses: actions/setup-java@v4
+        if: steps.detect.outputs.exists == 'true'
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: gradle
+
+      - name: Build & Test
+        if: steps.detect.outputs.exists == 'true'
+        working-directory: ./backend
+        run: |
+          chmod +x ./gradlew
+          ./gradlew build
+
+  secret-scan:
+    name: Secret Scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Block committed .env files
+        run: |
+          if git ls-files | grep -E '(^|/)\.env$|(^|/)\.env\.(local|production|development)$'; then
+            echo "::error::.env 파일이 커밋되어 있습니다. 제거 후 다시 PR 하세요."
+            exit 1
+          fi
+          echo "커밋된 .env 파일 없음"

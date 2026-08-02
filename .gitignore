@@ -1,0 +1,53 @@
+# ── 비밀값 (절대 커밋 금지) ────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.jks
+serviceAccountKey.json
+credentials.json
+
+# ── Node / Frontend ───────────────────────────
+node_modules/
+.next/
+out/
+dist/
+build/
+coverage/
+.npm
+*.log
+npm-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ── Java / Spring ─────────────────────────────
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+target/
+*.class
+*.jar
+!gradle-wrapper.jar
+*.war
+application-local.yml
+application-secret.yml
+
+# ── Python ────────────────────────────────────
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# ── IDE / OS ──────────────────────────────────
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# ── 기타 ──────────────────────────────────────
+*.sqlite3
+/uploads/
+/tmp/

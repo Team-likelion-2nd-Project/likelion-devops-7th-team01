@@ -1,0 +1,77 @@
+# 4개 팀 공통 라벨 정의
+# 적용: gh label create 로 일괄 생성하거나 crazy-max/ghaction-github-labeler 사용
+# 사용법은 SETUP.md 참고
+
+# ── Type ──────────────────────────────────────────
+- name: feat
+  color: "0E8A16"
+  description: 새 기능
+- name: fix
+  color: "D73A4A"
+  description: 버그 수정
+- name: docs
+  color: "0075CA"
+  description: 문서만 수정
+- name: refactor
+  color: "FBCA04"
+  description: 리팩터링
+- name: design
+  color: "D876E3"
+  description: UI/스타일 변경
+- name: test
+  color: "BFD4F2"
+  description: 테스트 추가/수정
+- name: chore
+  color: "CFD3D7"
+  description: 빌드/설정/의존성
+- name: meeting
+  color: "5319E7"
+  description: 회의록
+
+# ── Area ──────────────────────────────────────────
+- name: area/frontend
+  color: "1D76DB"
+  description: 프론트엔드
+- name: area/backend
+  color: "0E4C92"
+  description: 백엔드
+- name: area/infra
+  color: "006B75"
+  description: 인프라/배포/CI
+- name: area/design
+  color: "E99695"
+  description: 디자인
+- name: area/db
+  color: "5D4037"
+  description: 데이터베이스/스키마
+
+# ── Priority ──────────────────────────────────────
+- name: P0
+  color: "B60205"
+  description: 즉시 처리 / 블로커
+- name: P1
+  color: "D93F0B"
+  description: 이번 스프린트
+- name: P2
+  color: "FBCA04"
+  description: 다음 스프린트
+- name: P3
+  color: "C2E0C6"
+  description: 여유 시
+
+# ── Status ────────────────────────────────────────
+- name: blocked
+  color: "000000"
+  description: 다른 작업에 막힘
+- name: in-review
+  color: "8B949E"
+  description: 리뷰 진행 중
+- name: help-wanted
+  color: "008672"
+  description: 도움 필요 / 트러블슈팅
+- name: sprint
+  color: "F9D0C4"
+  description: 현재 스프린트 범위
+- name: good-first-issue
+  color: "7057FF"
+  description: 처음 기여하기 좋은 이슈

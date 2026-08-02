@@ -1,0 +1,24 @@
+# CODEOWNERS — 경로별 자동 리뷰어 지정
+# 팀별로 GitHub ID를 채워 넣습니다. 지정된 사람은 해당 경로 PR에 자동으로 리뷰어가 됩니다.
+# 형식: <경로 패턴> <@GitHub-ID ...>
+
+# 기본 리뷰어 (모든 변경)
+*                       @{{팀장-id}}
+
+# 프론트엔드
+/frontend/              @{{fe-1}} @{{fe-2}}
+*.tsx                   @{{fe-1}}
+*.css                   @{{fe-1}}
+
+# 백엔드
+/backend/               @{{be-1}} @{{be-2}}
+
+# 인프라 / CI
+/.github/workflows/     @{{팀장-id}}
+/docker/                @{{팀장-id}}
+Dockerfile              @{{팀장-id}}
+
+# 문서 — 누구나 리뷰 가능하도록 팀 전체 지정
+/docs/                  @Team-likelion-2nd-Project/team-01
+README.md               @Team-likelion-2nd-Project/team-01
+CONTRIBUTING.md         @{{팀장-id}}
