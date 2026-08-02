@@ -51,7 +51,7 @@ git clone https://github.com/Team-likelion-2nd-Project/<레포이름>.git
 cd <레포이름>
 ```
 
-`<레포이름>` 은 자기 팀 것으로 바꿉니다. 예: `likelion-2nd-team01`
+`<레포이름>` 은 자기 팀 것으로 바꿉니다. 예: `likelion-devops-7th-team01`
 
 ### 2-2. 내 정보 등록
 
