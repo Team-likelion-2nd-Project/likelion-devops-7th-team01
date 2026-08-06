@@ -26,7 +26,7 @@
 | 이름 | 역할 | 담당 | GitHub |
 |------|------|------|--------|
 | 박영찬 | 팀장 / 인프라1 | Terraform, EKS | [@ycpark8156](https://github.com/ycpark8156) |
-| 김용민 | 인프라2 | CI/CD, 모니터링, Terraform | [@leeym27](https://github.com/leeym27) |
+| 이용민 | 인프라2 | CI/CD, 모니터링, Terraform | [@leeym27](https://github.com/leeym27) |
 | 김상협 | 풀스택1 | 수강신청 (API + UI) | [@HyeobSang](https://github.com/HyeobSang) |
 | 김차니 | 풀스택2 | 시간표·인증 (API + UI) | [@chaneee93](https://github.com/chaneee93) |
 
@@ -40,7 +40,7 @@
 |------|------|------|
 | Frontend | [team01-frontend](https://github.com/Team-likelion-2nd-Project/likelion-devops-7th-team01-frontend) | 김상협, 김차니 |
 | Backend | [team01-backend](https://github.com/Team-likelion-2nd-Project/likelion-devops-7th-team01-backend) | 김상협, 김차니 |
-| Infra | [team01-infra](https://github.com/Team-likelion-2nd-Project/likelion-devops-7th-team01-infra) | 박영찬, 김용민 |
+| Infra | [team01-infra](https://github.com/Team-likelion-2nd-Project/likelion-devops-7th-team01-infra) | 박영찬, 이용민 |
 
 ---
 
