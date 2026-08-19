@@ -10,14 +10,15 @@
 ![MySQL](https://img.shields.io/badge/MySQL-151515?style=for-the-badge&logo=mysql&logoColor=4479A1)
 ![AWS](https://img.shields.io/badge/AWS-151515?style=for-the-badge&logo=amazonwebservices&logoColor=FF9900)
 
+<!-- 시연 영상 준비되면 아래 주석을 해제하고 YOUTUBE_ID / YOUTUBE_URL을 채우세요.
+[![데모 영상](https://img.youtube.com/vi/YOUTUBE_ID/maxresdefault.jpg)](YOUTUBE_URL)
+-->
 
-[![데모 영상](https://img.youtube.com/vi/{{YOUTUBE_ID}}/maxresdefault.jpg)]({{YOUTUBE_URL}})
+대학 수강신청을 위한 웹 서비스입니다. 학생은 강의를 조회·신청하고, 자동 생성되는 시간표로 수강 계획을 확인할 수 있습니다. 수강신청 오픈 시각의 트래픽 폭증을 **HPA 오토스케일링**으로 견디고, **DB 트랜잭션 락 + Redis**로 정원 초과·시간 중복 신청을 방지하는 데 초점을 둔 프로젝트입니다.
 
-{{서비스 2~3문장 설명. 대상 사용자와 핵심 가치 중심으로.}}
-
-- **배포 주소:** {{https://example.com}}
-- **시연 영상:** [YouTube]({{YOUTUBE_URL}})
-- **문서 최종 정리일:** `YYYY-MM-DD` / **구현 기준일:** `YYYY-MM-DD`
+- **배포 주소:** _(배포 준비 중 — 확정 시 업데이트)_
+- **시연 영상:** _(준비 중 — YouTube 링크 추가 예정)_
+- **문서 최종 정리일:** `2026-08-19` / **구현 기준일:** `2026-08-19`
 
 ---
 
@@ -46,9 +47,9 @@
 
 ## 빠른 심사 흐름 (5분)
 
-1. {{데모 영상}} 을 확인합니다.
-2. {{배포 주소}} 를 엽니다.
-3. 테스트 계정으로 로그인합니다. (`ID: {{demo}}` / `PW: {{demo1234}}`)
+1. 시연 영상을 확인합니다. _(영상 준비 중)_
+2. 배포 주소를 엽니다. _(배포 준비 중)_
+3. 테스트 계정으로 로그인합니다. (`ID: k6test@example.com` / `PW: TestPass123!`)
 4. 강의 목록에서 수강신청을 진행합니다.
 5. 시간표 화면에서 신청한 강의가 반영되었는지 확인합니다.
 6. (선택) Grafana 대시보드에서 부하 테스트 시 파드가 늘어나는 모습을 확인합니다.
@@ -109,6 +110,8 @@ API 상세 경로와 요청/응답 구조는 Wiki > API Specification 을 따릅
 
 상세 설계·회의 기록은 **GitHub Wiki** 에서 관리합니다.
 
+📖 **[프로젝트 Wiki 바로가기](https://github.com/Team-likelion-2nd-Project/likelion-devops-7th-team01/wiki)**
+
 | 카테고리 | 문서 |
 |----------|------|
 | **Start Here** | 기획 배경 · UI Screens |
@@ -120,14 +123,12 @@ API 상세 경로와 요청/응답 구조는 Wiki > API Specification 을 따릅
 ## 범위 경계
 
 **현재 제공:**
-
 - 강의 조회, 수강신청/취소
 - 정원 관리, 동시성 제어(DB 락 + Redis)
 - 시간표 자동생성
 - HPA 기반 오토스케일링 (수강신청 API 대상)
 
 **현재 미제공:**
-
 - 게시판/공지 기능 — 오토스케일링 이라는 핵심 목표에 기여하지 않아 제외
 - 파일 업로드(S3 Presigned URL) — 동일한 이유로 제외
 - 강의 관리자 화면 — 강의 데이터는 DB 시드 스크립트로 사전 입력
@@ -139,7 +140,6 @@ API 상세 경로와 요청/응답 구조는 Wiki > API Specification 을 따릅
 ## 보안과 개인정보 경계
 
 이 저장소와 하위 레포는 모두 공개 저장소입니다. 다음 정보를 절대 포함하지 않습니다.
-
 - 인증·클라우드 비밀값, `.env` 실제 값, 인증서·키 파일
 - 실제 사용자 개인정보, 운영 DB 계정 정보
 - 내부 인프라 식별자 및 서버 직접 접근 URL
@@ -151,15 +151,13 @@ API 상세 경로와 요청/응답 구조는 Wiki > API Specification 을 따릅
 ## 로컬 실행
 
 로컬 실행 방법은 각 레포 README를 참고하세요.
-
 - Backend 실행법: [team01-backend README](https://github.com/Team-likelion-2nd-Project/likelion-devops-7th-team01-backend)
 - Frontend 실행법: [team01-frontend README](https://github.com/Team-likelion-2nd-Project/likelion-devops-7th-team01-frontend)
 - Infra(Terraform/K8s) 실행법: [team01-infra README](https://github.com/Team-likelion-2nd-Project/likelion-devops-7th-team01-infra)
 
 **검증**
-
 ```bash
-{{./gradlew test}}
+./gradlew test
 cd frontend && npm run build
 ```
 
