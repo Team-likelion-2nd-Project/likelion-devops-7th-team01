@@ -114,9 +114,8 @@ API 상세 경로와 요청/응답 구조는 Wiki > API Specification 을 따릅
 
 | 카테고리 | 문서 |
 |----------|------|
-| **Start Here** | 기획 배경 · UI Screens |
-| **Architecture** | System Architecture · ERD · API Specification |
-| **Operations** | 배포 가이드 · 회의록 · 트러블슈팅 |
+| **아키텍처 & 설계** | [System Architecture](https://github.com/Team-likelion-2nd-Project/likelion-devops-7th-team01/wiki/System-Architecture) · [Terraform Design](https://github.com/Team-likelion-2nd-Project/likelion-devops-7th-team01/wiki/Terraform-Design) · [Backend & DB Design](https://github.com/Team-likelion-2nd-Project/likelion-devops-7th-team01/wiki/Backend-&-DB-Design) · [Frontend & Auth Design](https://github.com/Team-likelion-2nd-Project/likelion-devops-7th-team01/wiki/Frontend-&-Auth-Design) |
+| **참고 자료** | [API Specification](https://github.com/Team-likelion-2nd-Project/likelion-devops-7th-team01/wiki/API-Specification) · [UI Screens](https://github.com/Team-likelion-2nd-Project/likelion-devops-7th-team01/wiki/UI-Screens) |
 
 ---
 
