@@ -1,24 +1,25 @@
 # 수강신청 시스템 (Course Registration System)
 
-> **협업이 처음이신가요?** 이슈 생성부터 PR 머지까지 전 과정은 [협업 가이드](./docs/GUIDE.md)를 먼저 읽어주세요.
 
 > **수강신청 오픈 시각의 트래픽 폭증 상황에서도 안정적으로 동작하는, HPA 오토스케일링 기반 수강신청 시스템**
 
-![Team](https://img.shields.io/badge/Team-01-151515?style=for-the-badge)
-![React](https://img.shields.io/badge/React-151515?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-151515?style=for-the-badge&logo=springboot&logoColor=6DB33F)
-![MySQL](https://img.shields.io/badge/MySQL-151515?style=for-the-badge&logo=mysql&logoColor=4479A1)
-![AWS](https://img.shields.io/badge/AWS-151515?style=for-the-badge&logo=amazonwebservices&logoColor=FF9900)
+![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?logo=springboot&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?logo=redis&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-7B42BC?logo=terraform&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?logo=kubernetes&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?logo=amazonaws&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?logo=githubactions&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?logo=grafana&logoColor=white)
 
-<!-- 시연 영상 준비되면 아래 주석을 해제하고 YOUTUBE_ID / YOUTUBE_URL을 채우세요.
-[![데모 영상](https://img.youtube.com/vi/YOUTUBE_ID/maxresdefault.jpg)](YOUTUBE_URL)
--->
 
 대학 수강신청을 위한 웹 서비스입니다. 학생은 강의를 조회·신청하고, 자동 생성되는 시간표로 수강 계획을 확인할 수 있습니다. 수강신청 오픈 시각의 트래픽 폭증을 **HPA 오토스케일링**으로 견디고, **DB 트랜잭션 락 + Redis**로 정원 초과·시간 중복 신청을 방지하는 데 초점을 둔 프로젝트입니다.
 
-- **배포 주소:** _(배포 준비 중 — 확정 시 업데이트)_
-- **시연 영상:** _(준비 중 — YouTube 링크 추가 예정)_
-- **문서 최종 정리일:** `2026-08-19` / **구현 기준일:** `2026-08-19`
+- **배포 주소**: [https://d37gr7mw2k23di.cloudfront.net](https://d37gr7mw2k23di.cloudfront.net)
+- **시연 영상**: [https://youtu.be/AspQ6-98HOc](https://youtu.be/AspQ6-98HOc)
+- **테스트 영상**: [https://youtu.be/nvTz1ZQpy1g](https://youtu.be/nvTz1ZQpy1g)
+- **문서 최종 정리일**: `2026-08-21` / **구현 기준일**: `2026-08-21`
 
 ---
 
@@ -47,12 +48,11 @@
 
 ## 빠른 심사 흐름 (5분)
 
-1. 시연 영상을 확인합니다. _(영상 준비 중)_
-2. 배포 주소를 엽니다. _(배포 준비 중)_
+1. 시연 영상을 확인합니다.
+2. 배포 주소를 엽니다. 
 3. 테스트 계정으로 로그인합니다. (`ID: k6test@example.com` / `PW: TestPass123!`)
 4. 강의 목록에서 수강신청을 진행합니다.
 5. 시간표 화면에서 신청한 강의가 반영되었는지 확인합니다.
-6. (선택) Grafana 대시보드에서 부하 테스트 시 파드가 늘어나는 모습을 확인합니다.
 
 ---
 
@@ -67,9 +67,6 @@
 ---
 
 ## Architecture
-
-<!-- 아키텍처 다이어그램 이미지는 나중에 docs/images/architecture.png로 추가 예정 -->
-<!-- ![아키텍처](./docs/images/architecture.png) -->
 
 ```
 사용자
